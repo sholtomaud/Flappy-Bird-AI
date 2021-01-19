@@ -44,8 +44,8 @@ function preload() {
   } else {
     birdSprite = loadImage("images/fatBird.png");
   }
-  topPipeSprite = loadImage("images/full pipe top.png");
-  bottomPipeSprite = loadImage("images/full pipe bottom.png");
+  topPipeSprite = loadImage("images/fullPipeTop.png");
+  bottomPipeSprite = loadImage("images/fullPipeBottom.png");
   backgroundSprite = loadImage("images/background.png");
   groundSprite = loadImage("images/groundPiece.png");
 
@@ -54,10 +54,10 @@ function preload() {
 function setup() {
   window.canvas = createCanvas(600, 800);
 
-  player = new Player();
-  // pipes = new PipePair(true);
-  // pipes2 = new PipePair(false, pipes);
-  // pipes2.setX(1.5 * canvas.width + pipes2.topPipe.width / 2);
+  // player = new Player();
+  pipes = new PipePair(true);
+  pipes2 = new PipePair(false, pipes);
+  pipes2.setX(1.5 * canvas.width + pipes2.topPipe.width / 2);
   ground = new Ground();
 
   pauseBecauseDead = false;
@@ -83,7 +83,7 @@ function draw() {
       population.naturalSelection();
     }
   }
-  // writeInfo();
+  writeInfo();
 }
 //-----------------------------------------------------------------------------------
 function showBestPlayersForEachGeneration() {

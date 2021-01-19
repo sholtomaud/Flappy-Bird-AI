@@ -162,27 +162,27 @@ class Player {
   //gets the output of the this.brain then converts them to actions
   think() {
 
-      var max = 0;
-      var maxIndex = 0;
-      //get the output of the neural network
-      this.decision = this.brain.feedForward(this.vision);
+    var max = 0;
+    var maxIndex = 0;
+    //get the output of the neural network
+    this.decision = this.brain.feedForward(this.vision);
 
-      if (this.decision[0] > 0.6) {
-        this.flap();
-      }
-      // for (var i = 0; i < this.decision.length; i++) {
-      //   if (this.decision[i] > max) {
-      //     max = this.decision[i];
-      //     maxIndex = i;
-      //   }
-      // }
-
-
-
-      //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<replace
+    if (this.decision[0] > 0.6) {
+      this.flap();
     }
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    //returns a clone of this player with the same brian
+    // for (var i = 0; i < this.decision.length; i++) {
+    //   if (this.decision[i] > max) {
+    //     max = this.decision[i];
+    //     maxIndex = i;
+    //   }
+    // }
+
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<replace
+  }
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------
+  //returns a clone of this player with the same brian
   clone() {
     var clone = new Player();
     clone.brain = this.brain.clone();
