@@ -1,4 +1,4 @@
-var panSpeed = 8;
+var panSpeed = 5;
 var gravity = 3;
 var player;
 
@@ -36,7 +36,7 @@ var genPlayerTemp; //player
 var showNothing = false;
 
 var randomPipeHeights = [];
-var isChristmas = true;
+var isChristmas = false;
 
 function preload() {
   if (isChristmas) {
@@ -52,7 +52,7 @@ function preload() {
 }
 
 function setup() {
-  window.canvas = createCanvas(600, 800);
+  window.canvas = createCanvas(800, 800);
 
   // player = new Player();
   pipes = new PipePair(true);
@@ -140,7 +140,7 @@ function drawToScreen() {
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function drawBrain() { //show the brain of whatever genome is currently showing
-  var startX = 350; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<replace
+  var startX = 150; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<replace
   var startY = 550;
   var w = 300;
   var h = 200;

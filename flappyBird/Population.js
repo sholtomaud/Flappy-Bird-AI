@@ -10,7 +10,7 @@ class Population {
     this.genPlayers = []; //new ArrayList<Player>();
     this.species = []; //new ArrayList<Species>();
 
-    this.massExtinctionEvent = false;
+    this.massExtinctionEvent = true;
     this.newStage = false;
 
     this.gensSinceNewWorld = 0;
